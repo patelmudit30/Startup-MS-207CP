@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Professional Enterprise Dark Theme (Vercel/Linear style) */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+    /* Solid refined card elements */
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Sophisticated Royal Blue Primary */
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Muted Grays */
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    /* Subtle Accent aligned with primary for graceful gradients */
+    --accent: 221 80% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 221 83% 53%;
+    --radius: 0.5rem;
+    /* sharper, more professional corners */
+
+    /* Status indicators */
+    --success: 142 71% 45%;
+    --warning: 38 92% 50%;
+    --info: 221 83% 53%;
+
+    /* Linear-style minimalist sidebar */
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 85%;
+    --sidebar-primary: 221 83% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 221 83% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', -apple-system, sans-serif;
+  }
+
+  ::selection {
+    @apply bg-primary/30 text-primary-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Inter', -apple-system, sans-serif;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+  }
+}
+
+@layer components {
+
+  /* Re-mapping previously glowing classes into solid enterprise boxes */
+  .glass-card {
+    @apply bg-card border border-border shadow-sm;
+    border-radius: var(--radius);
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-200 hover:border-primary/40 hover:bg-card/90;
+  }
+
+  .neon-glow {
+    /* Neutralized glow */
+    box-shadow: none;
+  }
+
+  .gradient-text {
+    @apply text-foreground font-bold tracking-tight;
+  }
+
+  .stat-card {
+    @apply glass-card-hover p-6 relative overflow-hidden;
+  }
+
+  .page-container {
+    @apply p-6 lg:p-8 space-y-8 max-w-[1600px] mx-auto;
+  }
+
+  .data-table {
+    @apply w-full glass-card overflow-hidden;
+  }
+
+  .data-table th {
+    @apply bg-secondary/30 font-medium tracking-tight text-xs text-muted-foreground uppercase border-b border-border text-left px-4 py-3;
+  }
+
+  .data-table td {
+    @apply border-b border-border/50 text-sm transition-colors text-left px-4 py-3;
+  }
+
+  .data-table tr:last-child td {
+    @apply border-0;
+  }
+
+  .data-table tr {
+    @apply hover:bg-secondary/40 transition-colors;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--border));
+    border-radius: 10px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--muted-foreground));
+  }
+}

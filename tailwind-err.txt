@@ -1,0 +1,332 @@
+Browserslist: browsers data (caniuse-lite) is 10 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+Rebuilding...
+CssSyntaxError: tailwindcss: E:\BVM_B.Tech\Sem4\207CP\Project\StartupMS-main\StartupMS-main\src\index.css:98:5: @apply should not be used with the 'group' utility
+    at Input.error (E:\BVM_B.Tech\Sem4\207CP\Project\StartupMS-main\StartupMS-main\node_modules\postcss\lib\input.js:135:16)
+    at AtRule.error (E:\BVM_B.Tech\Sem4\207CP\Project\StartupMS-main\StartupMS-main\node_modules\postcss\lib\node.js:146:32)
+    at processApply (E:\BVM_B.Tech\Sem4\207CP\Project\StartupMS-main\StartupMS-main\node_modules\tailwindcss\lib\lib\expandApplyAtRules.js:377:29)
+    at E:\BVM_B.Tech\Sem4\207CP\Project\StartupMS-main\StartupMS-main\node_modules\tailwindcss\lib\lib\expandApplyAtRules.js:551:9
+    at E:\BVM_B.Tech\Sem4\207CP\Project\StartupMS-main\StartupMS-main\node_modules\tailwindcss\lib\processTailwindFeatures.js:55:50
+    at async Object.Once (E:\BVM_B.Tech\Sem4\207CP\Project\StartupMS-main\StartupMS-main\node_modules\tailwindcss\lib\cli\build\plugin.js:245:17)
+    at async LazyResult.runAsync (E:\BVM_B.Tech\Sem4\207CP\Project\StartupMS-main\StartupMS-main\node_modules\postcss\lib\lazy-result.js:293:11)
+    at async build (E:\BVM_B.Tech\Sem4\207CP\Project\StartupMS-main\StartupMS-main\node_modules\tailwindcss\lib\cli\build\index.js:49:9) {
+  reason: "@apply should not be used with the 'group' utility",
+  file: 'E:\\BVM_B.Tech\\Sem4\\207CP\\Project\\StartupMS-main\\StartupMS-main\\src\\index.css',
+  source: '@tailwind base;\n' +
+    '@tailwind components;\n' +
+    '@tailwind utilities;\n' +
+    '\n' +
+    "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');\n" +
+    '\n' +
+    '@layer base {\n' +
+    '  :root {\n' +
+    '    /* Deeper midnight blue background */\n' +
+    '    --background: 224 35% 3%;\n' +
+    '    --foreground: 210 20% 98%;\n' +
+    '    /* Richer card background */\n' +
+    '    --card: 224 25% 7%;\n' +
+    '    --card-foreground: 210 20% 98%;\n' +
+    '    --popover: 222 25% 7%;\n' +
+    '    --popover-foreground: 210 20% 98%;\n' +
+    '\n' +
+    '    /* Vibrant modern startup colors */\n' +
+    '    --primary: 185 85% 50%;\n' +
+    '    --primary-foreground: 220 20% 4%;\n' +
+    '    --secondary: 224 25% 12%;\n' +
+    '    --secondary-foreground: 210 20% 88%;\n' +
+    '    --muted: 224 25% 12%;\n' +
+    '    --muted-foreground: 215 15% 65%;\n' +
+    '    --accent: 265 85% 68%;\n' +
+    '    --accent-foreground: 210 20% 98%;\n' +
+    '    --destructive: 350 80% 55%;\n' +
+    '    --destructive-foreground: 210 20% 98%;\n' +
+    '    --border: 224 20% 16%;\n' +
+    '    --input: 224 20% 16%;\n' +
+    '    --ring: 185 85% 50%;\n' +
+    '    --radius: 1rem;\n' +
+    '\n' +
+    '    /* Semantic scale */\n' +
+    '    --success: 150 80% 45%;\n' +
+    '    --warning: 35 95% 55%;\n' +
+    '    --info: 210 90% 60%;\n' +
+    '\n' +
+    '    /* Sidebar */\n' +
+    '    --sidebar-background: 224 35% 4%;\n' +
+    '    --sidebar-foreground: 210 20% 88%;\n' +
+    '    --sidebar-primary: 185 85% 50%;\n' +
+    '    --sidebar-primary-foreground: 220 20% 4%;\n' +
+    '    --sidebar-accent: 224 25% 10%;\n' +
+    '    --sidebar-accent-foreground: 210 20% 98%;\n' +
+    '    --sidebar-border: 224 20% 12%;\n' +
+    '    --sidebar-ring: 185 85% 50%;\n' +
+    '  }\n' +
+    '}\n' +
+    '\n' +
+    '@layer base {\n' +
+    '  * {\n' +
+    '    @apply border-border;\n' +
+    '  }\n' +
+    '\n' +
+    '  body {\n' +
+    '    @apply bg-background text-foreground font-sans antialiased;\n' +
+    "    font-family: 'Inter', sans-serif;\n" +
+    '  }\n' +
+    '\n' +
+    '  ::selection {\n' +
+    '    @apply bg-primary/30 text-primary-foreground;\n' +
+    '  }\n' +
+    '\n' +
+    '  h1,\n' +
+    '  h2,\n' +
+    '  h3,\n' +
+    '  h4,\n' +
+    '  h5,\n' +
+    '  h6 {\n' +
+    "    font-family: 'Space Grotesk', sans-serif;\n" +
+    '    letter-spacing: -0.02em;\n' +
+    '  }\n' +
+    '}\n' +
+    '\n' +
+    '@layer components {\n' +
+    '  .glass-card {\n' +
+    '    @apply bg-card/40 backdrop-blur-2xl border border-white/5 rounded-2xl shadow-xl shadow-black/20;\n' +
+    '  }\n' +
+    '\n' +
+    '  .glass-card-hover {\n' +
+    '    @apply glass-card transition-all duration-500 hover:border-primary/40 hover:bg-card/60 hover:-translate-y-1;\n' +
+    '  }\n' +
+    '\n' +
+    '  .glass-card-hover:hover {\n' +
+    '    box-shadow: 0 0 40px -10px hsl(var(--primary) / 0.25);\n' +
+    '  }\n' +
+    '\n' +
+    '  .neon-glow {\n' +
+    '    box-shadow: 0 0 30px -5px hsl(var(--primary)/0.4), 0 0 80px -10px hsl(var(--accent)/0.2);\n' +
+    '  }\n' +
+    '\n' +
+    '  .gradient-text {\n' +
+    '    @apply bg-clip-text text-transparent bg-gradient-to-r from-[hsl(var(--primary))] via-[hsl(var(--info))] to-[hsl(var(--accent))];\n' +
+    '  }\n' +
+    '\n' +
+    '  .stat-card {\n' +
+    '    @apply glass-card-hover p-6 relative overflow-hidden group;\n' +
+    '  }\n' +
+    '\n' +
+    '  .stat-card::before {\n' +
+    "    content: '';\n" +
+    '    @apply absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100;\n' +
+    '  }\n' +
+    '\n' +
+    '  .page-container {\n' +
+    '    @apply p-6 lg:p-8 space-y-8 max-w-[1600px] mx-auto;\n' +
+    '  }\n' +
+    '\n' +
+    '  .data-table {\n' +
+    '    @apply w-full glass-card overflow-hidden;\n' +
+    '  }\n' +
+    '\n' +
+    '  .data-table th {\n' +
+    '    @apply bg-secondary/40 backdrop-blur-md font-semibold tracking-wide text-xs text-muted-foreground uppercase border-b border-white/5;\n' +
+    '  }\n' +
+    '\n' +
+    '  .data-table td {\n' +
+    '    @apply border-b border-white/5 group-hover:border-transparent transition-colors;\n' +
+    '  }\n' +
+    '\n' +
+    '  .data-table tr {\n' +
+    '    @apply hover:bg-white/[0.02] transition-colors group;\n' +
+    '  }\n' +
+    '}\n' +
+    '\n' +
+    '@layer utilities {\n' +
+    '  .scrollbar-thin {\n' +
+    '    scrollbar-width: thin;\n' +
+    '    scrollbar-color: hsl(var(--border)) transparent;\n' +
+    '  }\n' +
+    '\n' +
+    '  .scrollbar-thin::-webkit-scrollbar {\n' +
+    '    width: 6px;\n' +
+    '    height: 6px;\n' +
+    '  }\n' +
+    '\n' +
+    '  .scrollbar-thin::-webkit-scrollbar-track {\n' +
+    '    background: transparent;\n' +
+    '  }\n' +
+    '\n' +
+    '  .scrollbar-thin::-webkit-scrollbar-thumb {\n' +
+    '    background-color: hsl(var(--border));\n' +
+    '    border-radius: 10px;\n' +
+    '  }\n' +
+    '\n' +
+    '  .scrollbar-thin::-webkit-scrollbar-thumb:hover {\n' +
+    '    background-color: hsl(var(--muted-foreground));\n' +
+    '  }\n' +
+    '}',
+  line: 98,
+  column: 5,
+  endLine: 98,
+  endColumn: 64,
+  input: {
+    column: 5,
+    endColumn: 64,
+    endLine: 98,
+    endOffset: 2493,
+    line: 98,
+    offset: 2434,
+    source: '@tailwind base;\n' +
+      '@tailwind components;\n' +
+      '@tailwind utilities;\n' +
+      '\n' +
+      "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');\n" +
+      '\n' +
+      '@layer base {\n' +
+      '  :root {\n' +
+      '    /* Deeper midnight blue background */\n' +
+      '    --background: 224 35% 3%;\n' +
+      '    --foreground: 210 20% 98%;\n' +
+      '    /* Richer card background */\n' +
+      '    --card: 224 25% 7%;\n' +
+      '    --card-foreground: 210 20% 98%;\n' +
+      '    --popover: 222 25% 7%;\n' +
+      '    --popover-foreground: 210 20% 98%;\n' +
+      '\n' +
+      '    /* Vibrant modern startup colors */\n' +
+      '    --primary: 185 85% 50%;\n' +
+      '    --primary-foreground: 220 20% 4%;\n' +
+      '    --secondary: 224 25% 12%;\n' +
+      '    --secondary-foreground: 210 20% 88%;\n' +
+      '    --muted: 224 25% 12%;\n' +
+      '    --muted-foreground: 215 15% 65%;\n' +
+      '    --accent: 265 85% 68%;\n' +
+      '    --accent-foreground: 210 20% 98%;\n' +
+      '    --destructive: 350 80% 55%;\n' +
+      '    --destructive-foreground: 210 20% 98%;\n' +
+      '    --border: 224 20% 16%;\n' +
+      '    --input: 224 20% 16%;\n' +
+      '    --ring: 185 85% 50%;\n' +
+      '    --radius: 1rem;\n' +
+      '\n' +
+      '    /* Semantic scale */\n' +
+      '    --success: 150 80% 45%;\n' +
+      '    --warning: 35 95% 55%;\n' +
+      '    --info: 210 90% 60%;\n' +
+      '\n' +
+      '    /* Sidebar */\n' +
+      '    --sidebar-background: 224 35% 4%;\n' +
+      '    --sidebar-foreground: 210 20% 88%;\n' +
+      '    --sidebar-primary: 185 85% 50%;\n' +
+      '    --sidebar-primary-foreground: 220 20% 4%;\n' +
+      '    --sidebar-accent: 224 25% 10%;\n' +
+      '    --sidebar-accent-foreground: 210 20% 98%;\n' +
+      '    --sidebar-border: 224 20% 12%;\n' +
+      '    --sidebar-ring: 185 85% 50%;\n' +
+      '  }\n' +
+      '}\n' +
+      '\n' +
+      '@layer base {\n' +
+      '  * {\n' +
+      '    @apply border-border;\n' +
+      '  }\n' +
+      '\n' +
+      '  body {\n' +
+      '    @apply bg-background text-foreground font-sans antialiased;\n' +
+      "    font-family: 'Inter', sans-serif;\n" +
+      '  }\n' +
+      '\n' +
+      '  ::selection {\n' +
+      '    @apply bg-primary/30 text-primary-foreground;\n' +
+      '  }\n' +
+      '\n' +
+      '  h1,\n' +
+      '  h2,\n' +
+      '  h3,\n' +
+      '  h4,\n' +
+      '  h5,\n' +
+      '  h6 {\n' +
+      "    font-family: 'Space Grotesk', sans-serif;\n" +
+      '    letter-spacing: -0.02em;\n' +
+      '  }\n' +
+      '}\n' +
+      '\n' +
+      '@layer components {\n' +
+      '  .glass-card {\n' +
+      '    @apply bg-card/40 backdrop-blur-2xl border border-white/5 rounded-2xl shadow-xl shadow-black/20;\n' +
+      '  }\n' +
+      '\n' +
+      '  .glass-card-hover {\n' +
+      '    @apply glass-card transition-all duration-500 hover:border-primary/40 hover:bg-card/60 hover:-translate-y-1;\n' +
+      '  }\n' +
+      '\n' +
+      '  .glass-card-hover:hover {\n' +
+      '    box-shadow: 0 0 40px -10px hsl(var(--primary) / 0.25);\n' +
+      '  }\n' +
+      '\n' +
+      '  .neon-glow {\n' +
+      '    box-shadow: 0 0 30px -5px hsl(var(--primary)/0.4), 0 0 80px -10px hsl(var(--accent)/0.2);\n' +
+      '  }\n' +
+      '\n' +
+      '  .gradient-text {\n' +
+      '    @apply bg-clip-text text-transparent bg-gradient-to-r from-[hsl(var(--primary))] via-[hsl(var(--info))] to-[hsl(var(--accent))];\n' +
+      '  }\n' +
+      '\n' +
+      '  .stat-card {\n' +
+      '    @apply glass-card-hover p-6 relative overflow-hidden group;\n' +
+      '  }\n' +
+      '\n' +
+      '  .stat-card::before {\n' +
+      "    content: '';\n" +
+      '    @apply absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100;\n' +
+      '  }\n' +
+      '\n' +
+      '  .page-container {\n' +
+      '    @apply p-6 lg:p-8 space-y-8 max-w-[1600px] mx-auto;\n' +
+      '  }\n' +
+      '\n' +
+      '  .data-table {\n' +
+      '    @apply w-full glass-card overflow-hidden;\n' +
+      '  }\n' +
+      '\n' +
+      '  .data-table th {\n' +
+      '    @apply bg-secondary/40 backdrop-blur-md font-semibold tracking-wide text-xs text-muted-foreground uppercase border-b border-white/5;\n' +
+      '  }\n' +
+      '\n' +
+      '  .data-table td {\n' +
+      '    @apply border-b border-white/5 group-hover:border-transparent transition-colors;\n' +
+      '  }\n' +
+      '\n' +
+      '  .data-table tr {\n' +
+      '    @apply hover:bg-white/[0.02] transition-colors group;\n' +
+      '  }\n' +
+      '}\n' +
+      '\n' +
+      '@layer utilities {\n' +
+      '  .scrollbar-thin {\n' +
+      '    scrollbar-width: thin;\n' +
+      '    scrollbar-color: hsl(var(--border)) transparent;\n' +
+      '  }\n' +
+      '\n' +
+      '  .scrollbar-thin::-webkit-scrollbar {\n' +
+      '    width: 6px;\n' +
+      '    height: 6px;\n' +
+      '  }\n' +
+      '\n' +
+      '  .scrollbar-thin::-webkit-scrollbar-track {\n' +
+      '    background: transparent;\n' +
+      '  }\n' +
+      '\n' +
+      '  .scrollbar-thin::-webkit-scrollbar-thumb {\n' +
+      '    background-color: hsl(var(--border));\n' +
+      '    border-radius: 10px;\n' +
+      '  }\n' +
+      '\n' +
+      '  .scrollbar-thin::-webkit-scrollbar-thumb:hover {\n' +
+      '    background-color: hsl(var(--muted-foreground));\n' +
+      '  }\n' +
+      '}',
+    url: 'file:///E:/BVM_B.Tech/Sem4/207CP/Project/StartupMS-main/StartupMS-main/src/index.css',
+    file: 'E:\\BVM_B.Tech\\Sem4\\207CP\\Project\\StartupMS-main\\StartupMS-main\\src\\index.css'
+  },
+  plugin: 'tailwindcss'
+}
